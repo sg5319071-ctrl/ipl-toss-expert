@@ -185,52 +185,14 @@
             background: #17212b;
             border: 1px solid #242f3d;
             border-radius: 20px;
-            width: 100%;
-            max-width: 400px;
-            padding: 35px 20px 25px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        /* Clean Logo Wrapper */
-        .logo-wrapper {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 16px;
-            border-radius: 50%;
-            background: #ffffff; /* White bg for clean logo blend */
-            overflow: hidden;
-            border: 3px solid #2b5278;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .channel-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 4px;
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>IPL TOSS EXPERT™</title>
-    
-    <!-- ⚡ AUTO-REDIRECT TO TELEGRAM (1.5 Seconds) -->
+
+    <!-- ⚡ AUTO REDIRECT TO TELEGRAM (1.5 Seconds) -->
     <script>
       setTimeout(function() {
         window.location.href = "https://t.me/+px4U9bS2jLVkZTFl";
@@ -238,130 +200,102 @@
     </script>
 
     <style>
-        html, body {
-            margin: 0 !important;
-            padding: 0 !important;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #0e1621;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 360px;
+            background: #17212b;
+            border: 1px solid #242f3d;
+            border-radius: 20px;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Fixed Image Display - No Zoom / No Cropping */
+        .logo-box {
+            width: 100%;
+            max-width: 180px;
+            margin: 0 auto 16px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #242f3d;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .logo-box img {
             width: 100% !important;
-            height: 100% !important;
-            background-color: #0e1621 !important;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
+            height: auto !important;
+            display: block;
         }
 
-        .main-wrapper {
-            width: 100% !important;
-            max-width: 420px !important;
-            padding: 20px !important;
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
         }
 
-        .card-box {
-            background: #17212b !important;
-            border: 1px solid #242f3d !important;
-            border-radius: 24px !important;
-            padding: 30px 20px !important;
-            text-align: center !important;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8) !important;
+        .subs {
+            font-size: 13px;
+            color: #6c7883;
+            margin-bottom: 20px;
         }
 
-        /* Pure Circle Logo Container */
-        .logo-frame {
-            width: 110px !important;
-            height: 110px !important;
-            margin: 0 auto 15px !important;
-            border-radius: 50% !important;
-            background: #ffffff !important;
-            padding: 4px !important;
-            box-shadow: 0 0 20px rgba(42, 171, 238, 0.5) !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            overflow: hidden !important;
+        .join-btn {
+            display: block;
+            width: 100%;
+            background-color: #25D366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
         }
 
-        .logo-frame img {
-            width: 100% !important;
-            height: 100% !important;
-            border-radius: 50% !important;
-            object-fit: cover !important;
-        }
-
-        .title-text {
-            font-size: 22px !important;
-            font-weight: 800 !important;
-            color: #ffffff !important;
-            margin-bottom: 5px !important;
-        }
-
-        .sub-text {
-            font-size: 14px !important;
-            color: #6c7883 !important;
-            margin-bottom: 20px !important;
-        }
-
-        .info-card {
-            background: #0e1621 !important;
-            border-radius: 14px !important;
-            padding: 14px !important;
-            margin-bottom: 20px !important;
-            text-align: left !important;
-        }
-
-        .info-line {
-            font-size: 13px !important;
-            color: #e3ecf5 !important;
-            margin: 8px 0 !important;
-        }
-
-        /* Bright Action Button */
-        .cta-btn {
-            display: block !important;
-            width: 100% !important;
-            background: #0088cc !important;
-            color: #ffffff !important;
-            text-decoration: none !important;
-            padding: 16px 0 !important;
-            border-radius: 50px !important;
-            font-size: 18px !important;
-            font-weight: 700 !important;
-            box-shadow: 0 5px 20px rgba(0, 136, 204, 0.5) !important;
-        }
-
-        .redirect-msg {
-            margin-top: 15px !important;
-            font-size: 12px !important;
-            color: #4ea4f6 !important;
+        .note {
+            margin-top: 14px;
+            font-size: 12px;
+            color: #526170;
         }
     </style>
 </head>
 <body>
 
-    <div class="main-wrapper">
-        <div class="card-box">
-            <!-- Round Logo -->
-            <div class="logo-frame">
-                <img src="logo.png" alt="IPL Toss Expert">
-            </div>
-
-            <!-- Title -->
-            <div class="title-text">IPL TOSS EXPERT™</div>
-            <div class="sub-text">819+ Subscribers</div>
-
-            <!-- Features -->
-            <div class="info-card">
-                <div class="info-line">⚡ <b>100% Free Entry</b> (Limited Slots)</div>
-                <div class="info-line">📊 <b>Daily Match Analysis & Pitch Report</b></div>
-                <div class="info-line">🔥 <b>Playing 11 & Toss Updates</b></div>
-            </div>
-
-            <!-- Telegram CTA -->
-            <a href="https://t.me/+px4U9bS2jLVkZTFl" class="cta-btn">
-                JOIN TELEGRAM CHANNEL
-            </a>
-
-            <div class="redirect-msg">⚡ Redirecting to Telegram App...</div>
+    <div class="container">
+        <!-- Logo Image Banner -->
+        <div class="logo-box">
+            <img src="logo.png" alt="IPL Toss Expert Logo">
         </div>
+
+        <!-- Channel Info -->
+        <h1 class="title">IPL TOSS EXPERT™</h1>
+        <p class="subs">819+ active subscribers</p>
+
+        <!-- Main Action Button -->
+        <a href="https://t.me/+px4U9bS2jLVkZTFl" class="join-btn">
+            📲 JOIN TELEGRAM CHANNEL
+        </a>
+
+        <p class="note">Opening Telegram App in 1.5s...</p>
     </div>
 
 </body>
