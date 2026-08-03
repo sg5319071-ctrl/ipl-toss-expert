@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>IPL TOSS EXPERT™ | Official Prediction Channel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Cabinet+Grotesk:wght@800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Auto Redirect Configuration (3 Seconds) -->
+    <!-- Auto Redirect in 3 Seconds -->
     <meta http-equiv="refresh" content="3;url=https://t.me/+px4U9bS2jLVkZTFl">
 
     <style>
         :root {
-            --accent-gold: #fbbf24;
-            --accent-green: #10b981;
-            --accent-cyan: #38bdf8;
-            --glass-bg: rgba(11, 15, 25, 0.85);
-            --glass-border: rgba(255, 255, 255, 0.15);
-            --text-main: #ffffff;
-            --text-muted: #94a3b8;
+            --gold-gradient: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+            --green-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            --cta-gradient: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+            --bg-dark: #070a13;
+            --card-bg: rgba(18, 24, 38, 0.75);
+            --border-glow: rgba(255, 215, 0, 0.25);
         }
 
         * {
@@ -26,248 +25,207 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
-            background-color: #07090e;
+            background-color: var(--bg-dark);
             background-image: 
-                radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.5) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(245, 158, 11, 0.4) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.5) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.5) 0px, transparent 50%);
-            background-size: 160% 160%;
-            animation: vibrantMesh 10s ease infinite alternate;
-            color: var(--text-main);
+                radial-gradient(circle at 50% 0%, rgba(255, 140, 0, 0.25) 0%, transparent 60%),
+                radial-gradient(circle at 50% 100%, rgba(0, 242, 254, 0.15) 0%, transparent 60%);
+            color: #ffffff;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px 15px;
-            position: relative;
-            overflow-x: hidden;
+            padding: 12px;
         }
 
-        @keyframes vibrantMesh {
-            0% { background-position: 0% 0%; }
-            50% { background-position: 100% 100%; }
-            100% { background-position: 0% 100%; }
-        }
-
-        .glow-orb {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(90px);
-            opacity: 0.5;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .orb-1 { width: 250px; height: 250px; background: #a855f7; top: 5%; left: 5%; }
-        .orb-2 { width: 280px; height: 280px; background: #10b981; bottom: 5%; right: 5%; }
-
-        /* Glassmorphism Card Container */
-        .container {
-            position: relative;
-            z-index: 10;
+        /* Glass Container - Ultra Professional */
+        .card-container {
             width: 100%;
-            max-width: 420px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid var(--glass-border);
+            max-width: 410px;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-top: 1px solid rgba(255, 215, 0, 0.4);
             border-radius: 28px;
-            padding: 28px 20px 24px;
+            padding: 24px 20px;
             text-align: center;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 20px 50px rgba(0, 0, 0, 0.8),
+                0 0 30px rgba(255, 140, 0, 0.15);
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Auto Redirect Banner */
-        .redirect-banner {
-            background: rgba(56, 189, 248, 0.12);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            color: var(--accent-cyan);
-            border-radius: 12px;
-            padding: 8px 12px;
-            font-size: 12px;
-            font-weight: 700;
-            margin-bottom: 18px;
-            display: flex;
+        /* Top Bar Indicator */
+        .top-status-bar {
+            background: rgba(0, 242, 254, 0.1);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            color: #00f2fe;
+            border-radius: 50px;
+            padding: 6px 14px;
+            font-size: 11px;
+            font-weight: 800;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 8px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
-        .redirect-timer {
-            background: var(--accent-cyan);
+        .timer-badge {
+            background: #00f2fe;
             color: #000;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
             font-size: 11px;
+            font-weight: 900;
         }
 
-        /* Avatar Container */
-        .avatar-wrapper {
+        /* Profile Logo with Glowing Ring */
+        .profile-sec {
             position: relative;
-            width: 105px;
-            height: 105px;
+            width: 110px;
+            height: 110px;
             margin: 0 auto 16px;
         }
 
-        .avatar-ring {
+        .glow-ring {
             position: absolute;
-            inset: -4px;
+            inset: -3px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #a855f7, #38bdf8, #10b981, #fbbf24);
-            animation: spin 4s linear infinite;
+            background: var(--gold-gradient);
+            filter: blur(4px);
+            opacity: 0.8;
+            animation: pulseGlow 3s ease-in-out infinite alternate;
         }
 
-        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @keyframes pulseGlow {
+            0% { opacity: 0.5; transform: scale(0.98); }
+            100% { opacity: 1; transform: scale(1.03); }
+        }
 
-        .avatar-img {
+        .profile-img {
             position: relative;
             width: 100%;
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #0b0f19;
-            background-color: #1e293b;
+            border: 3px solid #0d1322;
         }
 
-        /* Branding Text */
-        .title {
+        /* Brand Headers */
+        .brand-title {
             font-family: 'Cabinet Grotesk', sans-serif;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 900;
+            letter-spacing: -0.5px;
             color: #ffffff;
-            margin-bottom: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 6px;
+            margin-bottom: 4px;
         }
 
-        .verified-badge { color: #38bdf8; font-size: 18px; }
+        .verified-icon {
+            color: #38bdf8;
+            font-size: 20px;
+        }
 
-        .subtitle {
+        .brand-tag {
             font-size: 12px;
-            color: var(--text-muted);
-            font-weight: 600;
-            margin-bottom: 20px;
+            color: #94a3b8;
+            font-weight: 700;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
         }
 
-        /* Highlights Stats Grid */
-        .highlights-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 12px;
-            margin-bottom: 20px;
+        /* Stats Grid */
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-        }
-
-        .stat-val {
-            font-family: 'Cabinet Grotesk', sans-serif;
-            font-size: 19px;
-            font-weight: 900;
-            color: var(--accent-gold);
-        }
-
-        .stat-val.green { color: var(--accent-green); }
-
-        .stat-lbl {
-            font-size: 9px;
-            color: var(--text-muted);
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-top: 2px;
-        }
-
-        /* Features Box */
-        .feature-box {
-            background: rgba(15, 23, 42, 0.6);
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 14px 10px;
+            margin-bottom: 20px;
+        }
+
+        .stat-number {
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-number.green {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 9px;
+            color: #64748b;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        /* Features List */
+        .feature-card {
+            background: rgba(10, 15, 29, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 16px;
-            padding: 14px 16px;
+            padding: 14px;
             margin-bottom: 20px;
             text-align: left;
         }
 
-        .feature-row {
+        .feature-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 12px;
+            gap: 12px;
+            font-size: 13px;
+            font-weight: 700;
             color: #e2e8f0;
-            font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        .feature-row:last-child { margin-bottom: 0; }
+        .feature-item:last-child { margin-bottom: 0; }
 
-        .icon-wrap {
-            width: 26px;
-            height: 26px;
+        .feature-icon {
+            width: 28px;
+            height: 28px;
             border-radius: 8px;
-            background: rgba(16, 185, 129, 0.15);
-            border: 1px solid rgba(16, 185, 129, 0.3);
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            color: #ffd700;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent-green);
             font-size: 12px;
             flex-shrink: 0;
         }
 
-        /* High Conversion Buttons */
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 18px;
-        }
-
-        .cta-btn-fast {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-            padding: 16px 20px;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: 800;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            overflow: hidden;
-            animation: pulseGlow 2s infinite;
-        }
-
-        @keyframes pulseGlow {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-        }
-
-        .cta-btn-fast i { font-size: 20px; }
-
-        /* Social Proof Live User Counter */
-        .live-counter {
+        /* Live User Activity */
+        .live-user-bar {
             font-size: 11px;
-            color: #e2e8f0;
-            font-weight: 700;
+            font-weight: 800;
+            color: #22c55e;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -275,152 +233,167 @@
             margin-bottom: 16px;
         }
 
-        .pulse-dot {
-            width: 7px;
-            height: 7px;
-            background-color: #10b981;
+        .dot-pulse {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
             border-radius: 50%;
-            box-shadow: 0 0 8px #10b981;
+            box-shadow: 0 0 10px #22c55e;
         }
 
-        /* Trust Bar */
-        .trust-bar {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            padding-top: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .trust-cell {
+        /* High-Converting CTA Button */
+        .telegram-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 5px;
+            gap: 12px;
+            width: 100%;
+            padding: 18px 20px;
+            background: var(--cta-gradient);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 12px 30px rgba(0, 176, 155, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .telegram-btn:active {
+            transform: scale(0.98);
+        }
+
+        .telegram-btn i {
+            font-size: 22px;
+        }
+
+        .fallback-text {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .fallback-text a {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        /* Footer Badges */
+        .trust-footer {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 16px;
+            margin-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             font-size: 10px;
-            color: var(--text-muted);
+            color: #64748b;
             font-weight: 700;
         }
 
-        .trust-cell i { color: var(--accent-gold); font-size: 11px; }
-
-        .disclaimer {
-            font-size: 9px;
-            color: #64748b;
-            margin-top: 14px;
-            line-height: 1.4;
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
+
+        .trust-item i { color: #ffd700; }
     </style>
 </head>
 <body>
 
-    <div class="glow-orb orb-1"></div>
-    <div class="glow-orb orb-2"></div>
-
-    <div class="container">
+    <div class="card-container">
         
-        <!-- Auto Redirect Banner with Timer -->
-        <div class="redirect-banner">
+        <!-- Redirect Banner -->
+        <div class="top-status-bar">
             <i class="fas fa-bolt"></i>
-            <span>Redirecting to Telegram in</span>
-            <span class="redirect-timer" id="timer">3</span>
+            <span>Auto Redirecting in</span>
+            <span class="timer-badge" id="timer">3</span>
         </div>
 
-        <!-- Channel Avatar -->
-        <div class="avatar-wrapper">
-            <div class="avatar-ring"></div>
-            <img src="logo.png" alt="IPL Toss Expert" class="avatar-img" onerror="this.src='https://via.placeholder.com/105/0f172a/fbbf24?text=IPL+TOSS'">
+        <!-- Profile Picture -->
+        <div class="profile-sec">
+            <div class="glow-ring"></div>
+            <img src="logo.png" alt="IPL Toss Expert" class="profile-img" onerror="this.src='https://via.placeholder.com/110/0d1322/ffd700?text=IPL+TOSS'">
         </div>
 
-        <!-- Title -->
-        <h1 class="title">
+        <!-- Title & Subtitle -->
+        <h1 class="brand-title">
             IPL TOSS EXPERT™
-            <i class="fas fa-check-circle verified-badge"></i>
+            <i class="fas fa-check-circle verified-icon"></i>
         </h1>
-        <p class="subtitle">Official No.1 Cricket Prediction Channel</p>
+        <p class="brand-tag">No.1 Official Prediction Channel</p>
 
-        <!-- Stats -->
-        <div class="highlights-card">
-            <div class="stat-item">
-                <div class="stat-val">28.5K+</div>
-                <div class="stat-lbl">Members</div>
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div>
+                <div class="stat-number">28.5K+</div>
+                <div class="stat-label">Members</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-val green">99.2%</div>
-                <div class="stat-lbl">Accuracy</div>
+            <div>
+                <div class="stat-number green">99.2%</div>
+                <div class="stat-label">Accuracy</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-val">100%</div>
-                <div class="stat-lbl">Free Tips</div>
+            <div>
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Free Tips</div>
             </div>
         </div>
 
-        <!-- Features List -->
-        <div class="feature-box">
-            <div class="feature-row">
-                <div class="icon-wrap"><i class="fas fa-crown"></i></div>
+        <!-- Features Box -->
+        <div class="feature-card">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-crown"></i></div>
                 <span>IPL & International Toss Predictions</span>
             </div>
-            <div class="feature-row">
-                <div class="icon-wrap"><i class="fas fa-chart-line"></i></div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
                 <span>Session & Match Winner Analysis</span>
             </div>
-            <div class="feature-row">
-                <div class="icon-wrap"><i class="fas fa-bolt"></i></div>
-                <span>Instant Post-Toss Updates</span>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                <span>Instant Post-Toss Live Updates</span>
             </div>
         </div>
 
-        <!-- Live Viewer Count (Urgency Creator) -->
-        <div class="live-counter">
-            <div class="pulse-dot"></div>
-            <span><b>1,420 people</b> joined in last 10 mins</span>
+        <!-- Social Proof -->
+        <div class="live-user-bar">
+            <div class="dot-pulse"></div>
+            <span>1,420 users joined in last 10 mins</span>
         </div>
 
-        <!-- Fast Join Buttons -->
-        <div class="btn-container">
-            <a href="https://t.me/+px4U9bS2jLVkZTFl" class="cta-btn-fast" target="_blank">
-                <i class="fab fa-telegram-plane"></i>
-                ⚡ FAST JOIN TELEGRAM NOW
-            </a>
-        </div>
+        <!-- Fast Join Button -->
+        <a href="https://t.me/+px4U9bS2jLVkZTFl" class="telegram-btn" target="_blank">
+            <i class="fab fa-telegram-plane"></i>
+            Join Telegram Channel
+        </a>
+
+        <!-- Fallback link for users without App -->
+        <p class="fallback-text">
+            Don't have Telegram app? <a href="https://t.me/+px4U9bS2jLVkZTFl" target="_blank">Click here to open Web</a>
+        </p>
 
         <!-- Trust Badges -->
-        <div class="trust-bar">
-            <div class="trust-cell">
-                <i class="fas fa-shield-halved"></i>
-                <span>100% Verified</span>
-            </div>
-            <div class="trust-cell">
-                <i class="fas fa-bolt"></i>
-                <span>Instant Access</span>
-            </div>
-            <div class="trust-cell">
-                <i class="fas fa-star"></i>
-                <span>Free Tips</span>
-            </div>
+        <div class="trust-footer">
+            <div class="trust-item"><i class="fas fa-shield-alt"></i> 100% Safe</div>
+            <div class="trust-item"><i class="fas fa-bolt"></i> Fast Updates</div>
+            <div class="trust-item"><i class="fas fa-star"></i> Top Rated</div>
         </div>
-
-        <!-- Disclaimer -->
-        <p class="disclaimer">
-            © 2026 IPL Toss Expert. All rights reserved.<br>
-            Disclaimer: Sports analysis & information channel. We strictly oppose illegal betting.
-        </p>
 
     </div>
 
     <!-- Countdown Timer Script -->
     <script>
-        let timeLeft = 3;
-        const timerElement = document.getElementById('timer');
-        
-        const countdown = setInterval(() => {
-            timeLeft--;
-            if (timerElement) {
-                timerElement.textContent = timeLeft;
-            }
-            if (timeLeft <= 0) {
-                clearInterval(countdown);
+        let count = 3;
+        const timerEl = document.getElementById('timer');
+        const interval = setInterval(() => {
+            count--;
+            if(timerEl) timerEl.textContent = count;
+            if(count <= 0) {
+                clearInterval(interval);
                 window.location.href = "https://t.me/+px4U9bS2jLVkZTFl";
             }
         }, 1000);
