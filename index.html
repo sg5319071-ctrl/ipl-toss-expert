@@ -18,7 +18,6 @@
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       
-      // Aapki Pixel ID set kar di gayi hai
       fbq('init', '1352981867033325'); 
       fbq('track', 'PageView');
     </script>
@@ -51,6 +50,8 @@
             justify-content: center;
             align-items: center;
             padding: 12px;
+            overflow-x: hidden;
+            position: relative;
         }
 
         .card-container {
@@ -66,6 +67,7 @@
             text-align: center;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.15);
             position: relative;
+            z-index: 1;
         }
 
         .top-status-bar {
@@ -266,6 +268,71 @@
 
         .trust-item { display: flex; align-items: center; gap: 5px; }
         .trust-item i { color: #ffd700; }
+
+        /* Notification Popup Styling */
+        .fake-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 14px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            z-index: 9999;
+            transform: translateY(120px);
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            max-width: 280px;
+        }
+
+        .fake-popup.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .popup-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0088cc, #00f2fe);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .popup-info {
+            text-align: left;
+        }
+
+        .popup-title {
+            font-size: 12px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+
+        .popup-desc {
+            font-size: 10px;
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        .popup-time {
+            font-size: 9px;
+            color: #64748b;
+            float: right;
+            margin-left: 8px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -323,14 +390,14 @@
             <span>1,420 users joined in last 10 mins</span>
         </div>
 
-        <!-- Join Button with Event Tracking -->
-        <a id="joinBtn" href="https://t.me/+px4U9bS2jLVkZTFl" class="telegram-btn" onclick="trackLeadEvent()">
+        <!-- Smart Deep-Link Action -->
+        <a id="joinBtn" href="javascript:void(0)" onclick="openTelegram()" class="telegram-btn">
             <i class="fab fa-telegram-plane"></i>
-            Join Telegram Channel
+            JOIN TELEGRAM CHANNEL
         </a>
 
         <p class="fallback-text">
-            Don't have Telegram app? <a href="https://t.me/+px4U9bS2jLVkZTFl" onclick="trackLeadEvent()" target="_blank">Click here to open Web</a>
+            Don't have Telegram app? <a href="https://t.me/+px4U9bS2jLVkZTFl" onclick="openTelegram()" target="_blank">Click here to open Web</a>
         </p>
 
         <div class="trust-footer">
@@ -340,17 +407,31 @@
         </div>
     </div>
 
-    <script>
-        const telegramLink = "https://t.me/+px4U9bS2jLVkZTFl";
+    <!-- Live Dynamic Notification Popup -->
+    <div id="fakePopup" class="fake-popup">
+        <div class="popup-avatar" id="popupAvatar">R</div>
+        <div class="popup-info">
+            <div class="popup-title"><span id="popupName">Rahul S.</span> <span class="popup-time" id="popupTime">2s ago</span></div>
+            <div class="popup-desc"><i class="fas fa-check-circle"></i> Joined Telegram Channel</div>
+        </div>
+    </div>
 
-        // Lead Event Track Karne Ka Function
-        function trackLeadEvent() {
+    <script>
+        const webLink = "https://t.me/+px4U9bS2jLVkZTFl";
+        const appLink = "tg://join?invite=px4U9bS2jLVkZTFl";
+
+        // Lead Event & App Direct Trigger
+        function openTelegram() {
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Lead');
             }
+            window.location.href = appLink;
+            setTimeout(() => {
+                window.location.href = webLink;
+            }, 800);
         }
 
-        // Auto Redirect with Event Trigger
+        // Auto Redirect Timer
         let count = 3;
         const timerEl = document.getElementById('timer');
         const interval = setInterval(() => {
@@ -358,12 +439,38 @@
             if(timerEl) timerEl.textContent = count;
             if(count <= 0) {
                 clearInterval(interval);
-                trackLeadEvent();
-                window.location.href = telegramLink;
+                openTelegram();
             }
         }, 1000);
+
+        // Dynamic Fake Notification System
+        const names = ["Aman P.", "Rahul S.", "Vikas K.", "Sandeep M.", "Rohan G.", "Deepak T.", "Ankit V.", "Pankaj D.", "Karan R.", "Neeraj B."];
+        const cities = ["Delhi", "Mumbai", "Jaipur", "Lucknow", "Patna", "Indore", "Kolkata", "Ahmedabad"];
+        const times = ["Just now", "2s ago", "5s ago", "8s ago"];
+
+        function triggerNotification() {
+            const popup = document.getElementById('fakePopup');
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const randomCity = cities[Math.floor(Math.random() * cities.length)];
+            const randomTime = times[Math.floor(Math.random() * times.length)];
+
+            document.getElementById('popupName').innerText = `${randomName} (${randomCity})`;
+            document.getElementById('popupAvatar').innerText = randomName.charAt(0);
+            document.getElementById('popupTime').innerText = randomTime;
+
+            popup.classList.add('show');
+
+            setTimeout(() => {
+                popup.classList.remove('show');
+            }, 3000);
+        }
+
+        // Trigger first notification after 1.5s, then loop every 5-7s
+        setTimeout(() => {
+            triggerNotification();
+            setInterval(triggerNotification, 5500);
+        }, 1500);
     </script>
 
 </body>
 </html>
-
