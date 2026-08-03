@@ -6,15 +6,19 @@
     <title>IPL TOSS EXPERT™ | Official Prediction Channel</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Auto Redirect Configuration (3 Seconds) -->
+    <meta http-equiv="refresh" content="3;url=https://t.me/+px4U9bS2jLVkZTFl">
+
     <style>
         :root {
             --accent-gold: #fbbf24;
             --accent-green: #10b981;
             --accent-cyan: #38bdf8;
-            --glass-bg: rgba(11, 15, 25, 0.78);
-            --glass-border: rgba(255, 255, 255, 0.18);
+            --glass-bg: rgba(11, 15, 25, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.15);
             --text-main: #ffffff;
-            --text-muted: #cbd5e1;
+            --text-muted: #94a3b8;
         }
 
         * {
@@ -25,13 +29,12 @@
         }
 
         body {
-            background-color: #0b0f19;
+            background-color: #07090e;
             background-image: 
-                radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.65) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(245, 158, 11, 0.55) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.65) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.65) 0px, transparent 50%),
-                radial-gradient(at 50% 50%, rgba(236, 72, 153, 0.35) 0px, transparent 50%);
+                radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.5) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(245, 158, 11, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.5) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.5) 0px, transparent 50%);
             background-size: 160% 160%;
             animation: vibrantMesh 10s ease infinite alternate;
             color: var(--text-main);
@@ -39,7 +42,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 24px 15px;
+            padding: 20px 15px;
             position: relative;
             overflow-x: hidden;
         }
@@ -50,125 +53,80 @@
             100% { background-position: 0% 100%; }
         }
 
-        /* Floating Light Spheres */
         .glow-orb {
             position: fixed;
             border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.6;
+            filter: blur(90px);
+            opacity: 0.5;
             pointer-events: none;
             z-index: 1;
-            animation: orbFloat 8s infinite alternate ease-in-out;
         }
 
-        .orb-1 {
-            width: 250px;
-            height: 250px;
-            background: #a855f7;
-            top: 5%;
-            left: 10%;
-        }
+        .orb-1 { width: 250px; height: 250px; background: #a855f7; top: 5%; left: 5%; }
+        .orb-2 { width: 280px; height: 280px; background: #10b981; bottom: 5%; right: 5%; }
 
-        .orb-2 {
-            width: 280px;
-            height: 280px;
-            background: #10b981;
-            bottom: 5%;
-            right: 10%;
-            animation-delay: -3s;
-        }
-
-        @keyframes orbFloat {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(30px, 40px) scale(1.15); }
-        }
-
-        /* Grid Pattern Overlay */
-        .grid-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-            background-size: 28px 28px;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        /* Glassmorphism Container */
+        /* Glassmorphism Card Container */
         .container {
             position: relative;
             z-index: 10;
             width: 100%;
-            max-width: 440px;
+            max-width: 420px;
             background: var(--glass-bg);
-            backdrop-filter: blur(28px);
-            -webkit-backdrop-filter: blur(28px);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
             border: 1px solid var(--glass-border);
-            border-radius: 32px;
-            padding: 32px 24px 28px;
+            border-radius: 28px;
+            padding: 28px 20px 24px;
             text-align: center;
-            box-shadow: 
-                0 30px 70px rgba(0, 0, 0, 0.6),
-                0 0 45px rgba(168, 85, 247, 0.25),
-                inset 0 1px 2px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.2);
         }
 
-        /* Live Status Pill */
-        .live-status {
+        /* Auto Redirect Banner */
+        .redirect-banner {
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-cyan);
+            border-radius: 12px;
+            padding: 8px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .redirect-timer {
+            background: var(--accent-cyan);
+            color: #000;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(16, 185, 129, 0.18);
-            border: 1px solid rgba(16, 185, 129, 0.45);
-            color: #34d399;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 11px;
+            justify-content: center;
             font-weight: 800;
-            letter-spacing: 0.6px;
-            text-transform: uppercase;
-            margin-bottom: 22px;
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
-        }
-
-        .pulse-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #10b981;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #10b981;
-            animation: pulseDot 1.5s infinite;
-        }
-
-        @keyframes pulseDot {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.8); }
-            70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+            font-size: 11px;
         }
 
         /* Avatar Container */
         .avatar-wrapper {
             position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 18px;
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 16px;
         }
 
         .avatar-ring {
             position: absolute;
-            inset: -5px;
+            inset: -4px;
             border-radius: 50%;
             background: linear-gradient(135deg, #a855f7, #38bdf8, #10b981, #fbbf24);
-            animation: spinRing 5s linear infinite;
-            filter: blur(3px);
+            animation: spin 4s linear infinite;
         }
 
-        @keyframes spinRing {
-            100% { transform: rotate(360deg); }
-        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
 
         .avatar-img {
             position: relative;
@@ -176,235 +134,210 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #0f172a;
+            border: 3px solid #0b0f19;
             background-color: #1e293b;
         }
 
-        /* Headers */
+        /* Branding Text */
         .title {
-            font-family: 'Cabinet Grotesk', 'Plus Jakarta Sans', sans-serif;
-            font-size: 26px;
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-size: 24px;
             font-weight: 900;
             color: #ffffff;
-            letter-spacing: -0.5px;
             margin-bottom: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            gap: 6px;
         }
 
-        .verified-badge {
-            color: #38bdf8;
-            font-size: 20px;
-        }
+        .verified-badge { color: #38bdf8; font-size: 18px; }
 
         .subtitle {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-muted);
             font-weight: 600;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
 
-        /* Highlights Grid */
+        /* Highlights Stats Grid */
         .highlights-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 20px;
-            padding: 16px;
-            margin-bottom: 22px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 12px;
+            margin-bottom: 20px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            backdrop-filter: blur(10px);
-        }
-
-        .stat-item {
-            text-align: center;
+            gap: 8px;
         }
 
         .stat-val {
             font-family: 'Cabinet Grotesk', sans-serif;
-            font-size: 21px;
+            font-size: 19px;
             font-weight: 900;
             color: var(--accent-gold);
-            line-height: 1.1;
         }
 
-        .stat-val.green {
-            color: var(--accent-green);
-        }
+        .stat-val.green { color: var(--accent-green); }
 
         .stat-lbl {
-            font-size: 10px;
+            font-size: 9px;
             color: var(--text-muted);
             font-weight: 700;
-            margin-top: 4px;
             text-transform: uppercase;
-            letter-spacing: 0.4px;
+            margin-top: 2px;
         }
 
-        /* Feature List */
+        /* Features Box */
         .feature-box {
-            background: rgba(15, 23, 42, 0.55);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 16px 18px;
-            margin-bottom: 24px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 14px 16px;
+            margin-bottom: 20px;
             text-align: left;
         }
 
         .feature-row {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 13px;
-            color: #f1f5f9;
+            gap: 10px;
+            font-size: 12px;
+            color: #e2e8f0;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
-        .feature-row:last-child {
-            margin-bottom: 0;
-        }
+        .feature-row:last-child { margin-bottom: 0; }
 
         .icon-wrap {
-            width: 30px;
-            height: 30px;
-            border-radius: 10px;
-            background: rgba(16, 185, 129, 0.2);
-            border: 1px solid rgba(16, 185, 129, 0.4);
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--accent-green);
-            font-size: 14px;
+            font-size: 12px;
             flex-shrink: 0;
         }
 
-        /* CTA Button */
-        .btn-wrapper {
-            position: relative;
-            margin-bottom: 20px;
+        /* High Conversion Buttons */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 18px;
         }
 
-        .cta-btn {
+        .cta-btn-fast {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             width: 100%;
-            padding: 18px 24px;
-            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: #ffffff;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 800;
             text-decoration: none;
-            border-radius: 100px;
-            box-shadow: 
-                0 14px 30px rgba(16, 185, 129, 0.5),
-                0 0 25px rgba(16, 185, 129, 0.3);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: 0.5px;
             border: 1px solid rgba(255, 255, 255, 0.3);
             overflow: hidden;
+            animation: pulseGlow 2s infinite;
         }
 
-        .cta-btn::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                45deg,
-                transparent,
-                rgba(255, 255, 255, 0.35),
-                transparent
-            );
-            transform: rotate(45deg);
-            animation: shine 2.8s infinite;
+        @keyframes pulseGlow {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
         }
 
-        @keyframes shine {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
+        .cta-btn-fast i { font-size: 20px; }
+
+        /* Social Proof Live User Counter */
+        .live-counter {
+            font-size: 11px;
+            color: #e2e8f0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 16px;
         }
 
-        .cta-btn:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 
-                0 18px 36px rgba(16, 185, 129, 0.65),
-                0 0 30px rgba(16, 185, 129, 0.45);
+        .pulse-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10b981;
         }
 
-        .cta-btn i {
-            font-size: 22px;
-        }
-
-        /* Trust Footer */
+        /* Trust Bar */
         .trust-bar {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            padding-top: 18px;
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            gap: 8px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .trust-cell {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
-            font-size: 11px;
+            gap: 5px;
+            font-size: 10px;
             color: var(--text-muted);
             font-weight: 700;
         }
 
-        .trust-cell i {
-            color: var(--accent-gold);
-            font-size: 13px;
-        }
+        .trust-cell i { color: var(--accent-gold); font-size: 11px; }
 
         .disclaimer {
-            font-size: 10px;
-            color: #94a3b8;
-            margin-top: 18px;
-            line-height: 1.5;
+            font-size: 9px;
+            color: #64748b;
+            margin-top: 14px;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
 
-    <!-- Light Orbs & Grid -->
     <div class="glow-orb orb-1"></div>
     <div class="glow-orb orb-2"></div>
-    <div class="grid-overlay"></div>
 
     <div class="container">
         
-        <!-- Live Status -->
-        <div class="live-status">
-            <div class="pulse-dot"></div>
-            <span>IPL 2026 Predictions Live</span>
+        <!-- Auto Redirect Banner with Timer -->
+        <div class="redirect-banner">
+            <i class="fas fa-bolt"></i>
+            <span>Redirecting to Telegram in</span>
+            <span class="redirect-timer" id="timer">3</span>
         </div>
 
-        <!-- Logo Avatar -->
+        <!-- Channel Avatar -->
         <div class="avatar-wrapper">
             <div class="avatar-ring"></div>
-            <img src="logo.png" alt="IPL Toss Expert Logo" class="avatar-img" onerror="this.src='https://via.placeholder.com/120/0f172a/fbbf24?text=IPL+TOSS'">
+            <img src="logo.png" alt="IPL Toss Expert" class="avatar-img" onerror="this.src='https://via.placeholder.com/105/0f172a/fbbf24?text=IPL+TOSS'">
         </div>
 
-        <!-- Title & Subtitle -->
+        <!-- Title -->
         <h1 class="title">
             IPL TOSS EXPERT™
             <i class="fas fa-check-circle verified-badge"></i>
         </h1>
-        <p class="subtitle">Official No.1 Cricket & Toss Prediction Channel</p>
+        <p class="subtitle">Official No.1 Cricket Prediction Channel</p>
 
         <!-- Stats -->
         <div class="highlights-card">
@@ -422,7 +355,7 @@
             </div>
         </div>
 
-        <!-- Features -->
+        <!-- Features List -->
         <div class="feature-box">
             <div class="feature-row">
                 <div class="icon-wrap"><i class="fas fa-crown"></i></div>
@@ -434,15 +367,21 @@
             </div>
             <div class="feature-row">
                 <div class="icon-wrap"><i class="fas fa-bolt"></i></div>
-                <span>Instant Post-Toss Live Updates</span>
+                <span>Instant Post-Toss Updates</span>
             </div>
         </div>
 
-        <!-- CTA Button -->
-        <div class="btn-wrapper">
-            <a href="https://t.me/+px4U9bS2jLVkZTFl" class="cta-btn" target="_blank">
+        <!-- Live Viewer Count (Urgency Creator) -->
+        <div class="live-counter">
+            <div class="pulse-dot"></div>
+            <span><b>1,420 people</b> joined in last 10 mins</span>
+        </div>
+
+        <!-- Fast Join Buttons -->
+        <div class="btn-container">
+            <a href="https://t.me/+px4U9bS2jLVkZTFl" class="cta-btn-fast" target="_blank">
                 <i class="fab fa-telegram-plane"></i>
-                Join Free Telegram
+                ⚡ FAST JOIN TELEGRAM NOW
             </a>
         </div>
 
@@ -450,25 +389,42 @@
         <div class="trust-bar">
             <div class="trust-cell">
                 <i class="fas fa-shield-halved"></i>
-                <span>100% Safe</span>
+                <span>100% Verified</span>
             </div>
             <div class="trust-cell">
                 <i class="fas fa-bolt"></i>
-                <span>Fast Updates</span>
+                <span>Instant Access</span>
             </div>
             <div class="trust-cell">
                 <i class="fas fa-star"></i>
-                <span>Top Rated</span>
+                <span>Free Tips</span>
             </div>
         </div>
 
         <!-- Disclaimer -->
         <p class="disclaimer">
             © 2026 IPL Toss Expert. All rights reserved.<br>
-            Disclaimer: This page provides sports analytical opinions & news. We do not support illegal gambling.
+            Disclaimer: Sports analysis & information channel. We strictly oppose illegal betting.
         </p>
 
     </div>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        let timeLeft = 3;
+        const timerElement = document.getElementById('timer');
+        
+        const countdown = setInterval(() => {
+            timeLeft--;
+            if (timerElement) {
+                timerElement.textContent = timeLeft;
+            }
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = "https://t.me/+px4U9bS2jLVkZTFl";
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
