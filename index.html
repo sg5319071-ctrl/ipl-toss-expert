@@ -85,19 +85,6 @@
             text-transform: uppercase;
         }
 
-        .timer-badge {
-            background: #00f2fe;
-            color: #000;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            font-weight: 900;
-        }
-
         .profile-sec {
             position: relative;
             width: 110px;
@@ -269,25 +256,25 @@
         .trust-item { display: flex; align-items: center; gap: 5px; }
         .trust-item i { color: #ffd700; }
 
-        /* Notification Popup Styling */
+        /* Fake Notification Popup Styling */
         .fake-popup {
             position: fixed;
             bottom: 20px;
             left: 20px;
             background: rgba(15, 23, 42, 0.95);
-            border: 1px solid rgba(56, 189, 248, 0.3);
+            border: 1px solid rgba(56, 189, 248, 0.4);
             backdrop-filter: blur(10px);
             border-radius: 14px;
             padding: 10px 14px;
             display: flex;
             align-items: center;
             gap: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
             z-index: 9999;
             transform: translateY(120px);
             opacity: 0;
             transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            max-width: 280px;
+            max-width: 290px;
         }
 
         .fake-popup.show {
@@ -340,8 +327,7 @@
     <div class="card-container">
         <div class="top-status-bar">
             <i class="fas fa-bolt"></i>
-            <span>Auto Redirecting in</span>
-            <span class="timer-badge" id="timer">3</span>
+            <span>Official Prediction Channel</span>
         </div>
 
         <div class="profile-sec">
@@ -390,7 +376,7 @@
             <span>1,420 users joined in last 10 mins</span>
         </div>
 
-        <!-- Smart Deep-Link Action -->
+        <!-- Direct Deep-Link Action -->
         <a id="joinBtn" href="javascript:void(0)" onclick="openTelegram()" class="telegram-btn">
             <i class="fab fa-telegram-plane"></i>
             JOIN TELEGRAM CHANNEL
@@ -420,30 +406,19 @@
         const webLink = "https://t.me/+px4U9bS2jLVkZTFl";
         const appLink = "tg://join?invite=px4U9bS2jLVkZTFl";
 
-        // Lead Event & App Direct Trigger
+        // Lead Event & Deep-Linking Trigger
         function openTelegram() {
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Lead');
             }
+            // Direct Telegram App Kholega
             window.location.href = appLink;
             setTimeout(() => {
                 window.location.href = webLink;
             }, 800);
         }
 
-        // Auto Redirect Timer
-        let count = 3;
-        const timerEl = document.getElementById('timer');
-        const interval = setInterval(() => {
-            count--;
-            if(timerEl) timerEl.textContent = count;
-            if(count <= 0) {
-                clearInterval(interval);
-                openTelegram();
-            }
-        }, 1000);
-
-        // Dynamic Fake Notification System
+        // Dynamic Fake Notification Pop-up
         const names = ["Aman P.", "Rahul S.", "Vikas K.", "Sandeep M.", "Rohan G.", "Deepak T.", "Ankit V.", "Pankaj D.", "Karan R.", "Neeraj B."];
         const cities = ["Delhi", "Mumbai", "Jaipur", "Lucknow", "Patna", "Indore", "Kolkata", "Ahmedabad"];
         const times = ["Just now", "2s ago", "5s ago", "8s ago"];
@@ -462,13 +437,13 @@
 
             setTimeout(() => {
                 popup.classList.remove('show');
-            }, 3000);
+            }, 3200);
         }
 
-        // Trigger first notification after 1.5s, then loop every 5-7s
+        // 1.5 Seconds ke baad pehla popup aayega, fir har 5 second me repeat hoga
         setTimeout(() => {
             triggerNotification();
-            setInterval(triggerNotification, 5500);
+            setInterval(triggerNotification, 5000);
         }, 1500);
     </script>
 
