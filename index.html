@@ -7,17 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Cabinet+Grotesk:wght@800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Auto Redirect in 3 Seconds -->
-    <meta http-equiv="refresh" content="3;url=https://t.me/+px4U9bS2jLVkZTFl">
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      
+      // Aapki Pixel ID set kar di gayi hai
+      fbq('init', '1352981867033325'); 
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
 
     <style>
         :root {
             --gold-gradient: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
-            --green-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
             --cta-gradient: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
             --bg-dark: #070a13;
             --card-bg: rgba(18, 24, 38, 0.75);
-            --border-glow: rgba(255, 215, 0, 0.25);
         }
 
         * {
@@ -41,7 +53,6 @@
             padding: 12px;
         }
 
-        /* Glass Container - Ultra Professional */
         .card-container {
             width: 100%;
             max-width: 410px;
@@ -53,14 +64,10 @@
             border-radius: 28px;
             padding: 24px 20px;
             text-align: center;
-            box-shadow: 
-                0 20px 50px rgba(0, 0, 0, 0.8),
-                0 0 30px rgba(255, 140, 0, 0.15);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.15);
             position: relative;
-            overflow: hidden;
         }
 
-        /* Top Bar Indicator */
         .top-status-bar {
             background: rgba(0, 242, 254, 0.1);
             border: 1px solid rgba(0, 242, 254, 0.3);
@@ -73,7 +80,6 @@
             align-items: center;
             gap: 8px;
             margin-bottom: 20px;
-            letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
@@ -90,7 +96,6 @@
             font-weight: 900;
         }
 
-        /* Profile Logo with Glowing Ring */
         .profile-sec {
             position: relative;
             width: 110px;
@@ -122,12 +127,10 @@
             border: 3px solid #0d1322;
         }
 
-        /* Brand Headers */
         .brand-title {
             font-family: 'Cabinet Grotesk', sans-serif;
             font-size: 26px;
             font-weight: 900;
-            letter-spacing: -0.5px;
             color: #ffffff;
             display: flex;
             align-items: center;
@@ -136,10 +139,7 @@
             margin-bottom: 4px;
         }
 
-        .verified-icon {
-            color: #38bdf8;
-            font-size: 20px;
-        }
+        .verified-icon { color: #38bdf8; font-size: 20px; }
 
         .brand-tag {
             font-size: 12px;
@@ -147,10 +147,8 @@
             font-weight: 700;
             margin-bottom: 22px;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
         }
 
-        /* Stats Grid */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -177,15 +175,8 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .stat-label {
-            font-size: 9px;
-            color: #64748b;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-top: 3px;
-        }
+        .stat-label { font-size: 9px; color: #64748b; font-weight: 800; text-transform: uppercase; margin-top: 3px; }
 
-        /* Features List */
         .feature-card {
             background: rgba(10, 15, 29, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.06);
@@ -221,7 +212,6 @@
             flex-shrink: 0;
         }
 
-        /* Live User Activity */
         .live-user-bar {
             font-size: 11px;
             font-weight: 800;
@@ -241,7 +231,6 @@
             box-shadow: 0 0 10px #22c55e;
         }
 
-        /* High-Converting CTA Button */
         .telegram-btn {
             display: flex;
             align-items: center;
@@ -257,32 +246,13 @@
             border-radius: 50px;
             box-shadow: 0 12px 30px rgba(0, 176, 155, 0.4);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
             border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.2s ease;
+            cursor: pointer;
         }
 
-        .telegram-btn:active {
-            transform: scale(0.98);
-        }
+        .fallback-text { font-size: 11px; color: #94a3b8; margin-top: 10px; font-weight: 600; }
+        .fallback-text a { color: #38bdf8; text-decoration: underline; }
 
-        .telegram-btn i {
-            font-size: 22px;
-        }
-
-        .fallback-text {
-            font-size: 11px;
-            color: #94a3b8;
-            margin-top: 10px;
-            font-weight: 600;
-        }
-
-        .fallback-text a {
-            color: #38bdf8;
-            text-decoration: underline;
-        }
-
-        /* Footer Badges */
         .trust-footer {
             display: flex;
             justify-content: space-around;
@@ -294,40 +264,30 @@
             font-weight: 700;
         }
 
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
+        .trust-item { display: flex; align-items: center; gap: 5px; }
         .trust-item i { color: #ffd700; }
     </style>
 </head>
 <body>
 
     <div class="card-container">
-        
-        <!-- Redirect Banner -->
         <div class="top-status-bar">
             <i class="fas fa-bolt"></i>
             <span>Auto Redirecting in</span>
             <span class="timer-badge" id="timer">3</span>
         </div>
 
-        <!-- Profile Picture -->
         <div class="profile-sec">
             <div class="glow-ring"></div>
             <img src="logo.png" alt="IPL Toss Expert" class="profile-img" onerror="this.src='https://via.placeholder.com/110/0d1322/ffd700?text=IPL+TOSS'">
         </div>
 
-        <!-- Title & Subtitle -->
         <h1 class="brand-title">
             IPL TOSS EXPERT™
             <i class="fas fa-check-circle verified-icon"></i>
         </h1>
         <p class="brand-tag">No.1 Official Prediction Channel</p>
 
-        <!-- Stats Grid -->
         <div class="stats-grid">
             <div>
                 <div class="stat-number">28.5K+</div>
@@ -343,7 +303,6 @@
             </div>
         </div>
 
-        <!-- Features Box -->
         <div class="feature-card">
             <div class="feature-item">
                 <div class="feature-icon"><i class="fas fa-crown"></i></div>
@@ -359,34 +318,39 @@
             </div>
         </div>
 
-        <!-- Social Proof -->
         <div class="live-user-bar">
             <div class="dot-pulse"></div>
             <span>1,420 users joined in last 10 mins</span>
         </div>
 
-        <!-- Fast Join Button -->
-        <a href="https://t.me/+px4U9bS2jLVkZTFl" class="telegram-btn" target="_blank">
+        <!-- Join Button with Event Tracking -->
+        <a id="joinBtn" href="https://t.me/+px4U9bS2jLVkZTFl" class="telegram-btn" onclick="trackLeadEvent()">
             <i class="fab fa-telegram-plane"></i>
             Join Telegram Channel
         </a>
 
-        <!-- Fallback link for users without App -->
         <p class="fallback-text">
-            Don't have Telegram app? <a href="https://t.me/+px4U9bS2jLVkZTFl" target="_blank">Click here to open Web</a>
+            Don't have Telegram app? <a href="https://t.me/+px4U9bS2jLVkZTFl" onclick="trackLeadEvent()" target="_blank">Click here to open Web</a>
         </p>
 
-        <!-- Trust Badges -->
         <div class="trust-footer">
             <div class="trust-item"><i class="fas fa-shield-alt"></i> 100% Safe</div>
             <div class="trust-item"><i class="fas fa-bolt"></i> Fast Updates</div>
             <div class="trust-item"><i class="fas fa-star"></i> Top Rated</div>
         </div>
-
     </div>
 
-    <!-- Countdown Timer Script -->
     <script>
+        const telegramLink = "https://t.me/+px4U9bS2jLVkZTFl";
+
+        // Lead Event Track Karne Ka Function
+        function trackLeadEvent() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead');
+            }
+        }
+
+        // Auto Redirect with Event Trigger
         let count = 3;
         const timerEl = document.getElementById('timer');
         const interval = setInterval(() => {
@@ -394,10 +358,12 @@
             if(timerEl) timerEl.textContent = count;
             if(count <= 0) {
                 clearInterval(interval);
-                window.location.href = "https://t.me/+px4U9bS2jLVkZTFl";
+                trackLeadEvent();
+                window.location.href = telegramLink;
             }
         }, 1000);
     </script>
 
 </body>
 </html>
+
