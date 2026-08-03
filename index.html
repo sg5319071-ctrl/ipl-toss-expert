@@ -43,85 +43,131 @@
 
         .card {
             background: rgba(23, 33, 43, 0.95);
-            border: 2px solid #a88d3e; /* LUXURY GOLD BORDER */
-            border-radius: 28px;
-            width: 100%;
-            max-width: 390px;
-            padding: 40px 28px;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 15px rgba(168, 141, 62, 0.2);
-            position: relative;
-            backdrop-filter: blur(10px);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL TOSS EXPERT™</title>
+    
+    <!-- ⚡ AUTO-REDIRECT TO TELEGRAM (1.5 Seconds) -->
+    <script>
+      setTimeout(function() {
+        window.location.href = "https://t.me/+px4U9bS2jLVkZTFl";
+      }, 1500);
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
-        .logo-style-circle {
+        body {
+            background-color: #0e1621;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background: #17212b;
+            border: 1px solid #242f3d;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 380px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        .logo-box {
             width: 110px;
             height: 110px;
-            margin: 0 auto 20px;
+            margin: 0 auto 16px;
             border-radius: 50%;
-            background: radial-gradient(circle, #f0d58a 0%, #a88d3e 70%, #8c7332 100%); /* PURE GOLD GRADIENT */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            box-shadow: 0 10px 25px rgba(168, 141, 62, 0.4), inset 0 0 15px rgba(255,255,255,0.5);
-            border: 4px solid #0c1421;
+            overflow: hidden;
+            border: 3px solid #2AABEE;
+            box-shadow: 0 0 20px rgba(42, 171, 238, 0.4);
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .title {
-            font-size: 24px;
-            font-weight: 800;
-            color: #f0d58a; /* LUXURY LIGHT GOLD */
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
         }
 
-        .sub-title {
-            font-size: 13px;
-            color: #a88d3e; /* GOLDEN SUBTEXT */
-            margin-bottom: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .verified-badge {
+            color: #2AABEE;
+            font-size: 18px;
         }
 
         .subscribers {
-            font-size: 15px;
+            font-size: 14px;
             color: #7f91a4;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             font-weight: 500;
+        }
+
+        .features-list {
+            background: #0e1621;
+            border-radius: 14px;
+            padding: 12px 16px;
+            margin-bottom: 22px;
+            text-align: left;
+            border: 1px solid #202b36;
+        }
+
+        .feature-item {
+            font-size: 13px;
+            color: #d5e1ed;
+            margin: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            background: #2AABEE; /* TELEGRAM BLUE */
+            gap: 10px;
+            background: #2AABEE;
             color: #ffffff;
             text-decoration: none;
-            padding: 18px 24px;
+            padding: 16px 20px;
             border-radius: 50px;
-            font-size: 19px;
+            font-size: 17px;
             font-weight: 700;
-            box-shadow: 0 8px 25px rgba(42, 171, 238, 0.5);
-            animation: pulse 1.8s infinite;
-            transition: transform 0.2s;
+            box-shadow: 0 6px 22px rgba(42, 171, 238, 0.4);
+            animation: pulse 1.6s infinite;
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(42, 171, 238, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(42, 171, 238, 0); }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(42, 171, 238, 0.6); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 12px rgba(42, 171, 238, 0); }
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(42, 171, 238, 0); }
         }
 
-        .btn:active {
-            transform: scale(0.98);
-        }
-
         .redirect-text {
-            margin-top: 15px;
+            margin-top: 14px;
             font-size: 12px;
             color: #6c7883;
         }
@@ -130,25 +176,33 @@
 <body>
 
     <div class="card">
-        <!-- Logo Style Header with Golden Circle -->
-        <div class="logo-style-circle">
-            🏏
+        <!-- 🎯 GitHub Logo Image -->
+        <div class="logo-box">
+            <img src="logo.png" alt="IPL Toss Expert Logo">
         </div>
 
-        <!-- Premium Title & Analysis Info -->
-        <h1 class="title">IPL TOSS EXPERT™</h1>
-        <p class="sub-title">ANALYSIS & PREDICTIONS</p>
+        <!-- Title & Verified Badge -->
+        <h1 class="title">
+            IPL TOSS EXPERT™
+            <span class="verified-badge">✔</span>
+        </h1>
         <p class="subscribers">819+ active subscribers</p>
 
-        <!-- Dynamic Action Button -->
+        <!-- Features List -->
+        <div class="features-list">
+            <div class="feature-item">⚡ <b>100% Free Entry</b> (Limited Slots)</div>
+            <div class="feature-item">📊 <b>Daily Match & Pitch Analysis</b></div>
+            <div class="feature-item">🔥 <b>Playing 11 & Toss Updates</b></div>
+        </div>
+
+        <!-- Direct Join Button -->
         <a href="https://t.me/+px4U9bS2jLVkZTFl" class="btn">
-            VIEW OFFICIAL CHANNEL 🚀
+            VIEW IN TELEGRAM 🚀
         </a>
 
-        <!-- Redirect Status -->
+        <!-- Redirect Text -->
         <p class="redirect-text">Opening Telegram App in 1.5s...</p>
     </div>
 
 </body>
 </html>
-
