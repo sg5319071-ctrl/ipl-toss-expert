@@ -223,9 +223,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>IPL TOSS EXPERT™</title>
     
-    <!-- ⚡ AUTO-REDIRECT (1.5 Seconds) -->
+    <!-- ⚡ AUTO-REDIRECT TO TELEGRAM (1.5 Seconds) -->
     <script>
       setTimeout(function() {
         window.location.href = "https://t.me/+px4U9bS2jLVkZTFl";
@@ -233,167 +238,131 @@
     </script>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-color: #0e1621 !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
         }
 
-        body {
-            background-color: #0e1621;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 16px;
+        .main-wrapper {
+            width: 100% !important;
+            max-width: 420px !important;
+            padding: 20px !important;
         }
 
-        .tg-card {
-            background: #17212b;
-            border: 1px solid #242f3d;
-            border-radius: 20px;
-            width: 100%;
-            max-width: 400px;
-            padding: 35px 20px 25px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        .card-box {
+            background: #17212b !important;
+            border: 1px solid #242f3d !important;
+            border-radius: 24px !important;
+            padding: 30px 20px !important;
+            text-align: center !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8) !important;
         }
 
-        /* Clean Logo Wrapper */
-        .logo-wrapper {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 16px;
-            border-radius: 50%;
-            background: #ffffff; /* White bg for clean logo blend */
-            overflow: hidden;
-            border: 3px solid #2b5278;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Pure Circle Logo Container */
+        .logo-frame {
+            width: 110px !important;
+            height: 110px !important;
+            margin: 0 auto 15px !important;
+            border-radius: 50% !important;
+            background: #ffffff !important;
+            padding: 4px !important;
+            box-shadow: 0 0 20px rgba(42, 171, 238, 0.5) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            overflow: hidden !important;
         }
 
-        .logo-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .logo-frame img {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 50% !important;
+            object-fit: cover !important;
         }
 
-        .channel-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
+        .title-text {
+            font-size: 22px !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            margin-bottom: 5px !important;
         }
 
-        .verified-tick {
-            width: 20px;
-            height: 20px;
-            background: #2AABEE;
-            color: #fff;
-            border-radius: 50%;
-            font-size: 12px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+        .sub-text {
+            font-size: 14px !important;
+            color: #6c7883 !important;
+            margin-bottom: 20px !important;
         }
 
-        .sub-count {
-            font-size: 14px;
-            color: #7f91a4;
-            margin-bottom: 24px;
+        .info-card {
+            background: #0e1621 !important;
+            border-radius: 14px !important;
+            padding: 14px !important;
+            margin-bottom: 20px !important;
+            text-align: left !important;
         }
 
-        /* Feature Badges */
-        .badge-box {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            background: #0e1621;
-            padding: 16px;
-            border-radius: 12px;
-            margin-bottom: 24px;
-            text-align: left;
-            border: 1px solid #1c2733;
+        .info-line {
+            font-size: 13px !important;
+            color: #e3ecf5 !important;
+            margin: 8px 0 !important;
         }
 
-        .badge-item {
-            font-size: 14px;
-            color: #e3ecf5;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        /* Bright Action Button */
+        .cta-btn {
+            display: block !important;
+            width: 100% !important;
+            background: #0088cc !important;
+            color: #ffffff !important;
+            text-decoration: none !important;
+            padding: 16px 0 !important;
+            border-radius: 50px !important;
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            box-shadow: 0 5px 20px rgba(0, 136, 204, 0.5) !important;
         }
 
-        /* High Conversion Join Button */
-        .join-btn {
-            display: block;
-            width: 100%;
-            background: #25D366; /* High Trust Green */
-            color: #ffffff;
-            text-decoration: none;
-            padding: 16px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 700;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            animation: pulse 1.5s infinite;
-            letter-spacing: 0.5px;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
-
-        .redirect-notice {
-            margin-top: 16px;
-            font-size: 13px;
-            color: #6c7883;
+        .redirect-msg {
+            margin-top: 15px !important;
+            font-size: 12px !important;
+            color: #4ea4f6 !important;
         }
     </style>
 </head>
 <body>
 
-    <div class="tg-card">
-        <!-- Exact Fit Logo -->
-        <div class="logo-wrapper">
-            <img src="logo.png" alt="IPL Toss Expert">
+    <div class="main-wrapper">
+        <div class="card-box">
+            <!-- Round Logo -->
+            <div class="logo-frame">
+                <img src="logo.png" alt="IPL Toss Expert">
+            </div>
+
+            <!-- Title -->
+            <div class="title-text">IPL TOSS EXPERT™</div>
+            <div class="sub-text">819+ Subscribers</div>
+
+            <!-- Features -->
+            <div class="info-card">
+                <div class="info-line">⚡ <b>100% Free Entry</b> (Limited Slots)</div>
+                <div class="info-line">📊 <b>Daily Match Analysis & Pitch Report</b></div>
+                <div class="info-line">🔥 <b>Playing 11 & Toss Updates</b></div>
+            </div>
+
+            <!-- Telegram CTA -->
+            <a href="https://t.me/+px4U9bS2jLVkZTFl" class="cta-btn">
+                JOIN TELEGRAM CHANNEL
+            </a>
+
+            <div class="redirect-msg">⚡ Redirecting to Telegram App...</div>
         </div>
-
-        <!-- Title & Subtitle -->
-        <h1 class="channel-title">
-            IPL TOSS EXPERT™
-            <span class="verified-tick">✓</span>
-        </h1>
-        <p class="sub-count">819+ Subscribers</p>
-
-        <!-- Highlights -->
-        <div class="badge-box">
-            <div class="badge-item">⚡ <b>100% Free Entry</b> (Limited Slots)</div>
-            <div class="badge-item">📊 <b>Daily Toss & Pitch Analysis</b></div>
-            <div class="badge-item">🔥 <b>Match Updates & Playing 11</b></div>
-        </div>
-
-        <!-- Big Green Join Button -->
-        <a href="https://t.me/+px4U9bS2jLVkZTFl" class="join-btn">
-            📲 JOIN TELEGRAM CHANNEL
-        </a>
-
-        <p class="redirect-notice">Opening Telegram App automatically...</p>
     </div>
-
-</body>
-</html>
-
 
 </body>
 </html>
