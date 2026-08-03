@@ -1260,6 +1260,346 @@
             justify-content: center;
             font-size: 12px;
             font-weight: 900;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>IPL TOSS EXPERT™</title>
+
+    <!-- ⚡ AUTO REDIRECT (0.5 Secs) -->
+    <script>
+      setTimeout(function() {
+        window.location.href = "https://t.me/+px4U9bS2jLVkZTFl";
+      }, 500);
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background: #060c15;
+            background-image: 
+                radial-gradient(circle at 50% 15%, rgba(0, 230, 153, 0.18), transparent 55%),
+                radial-gradient(circle at 50% 85%, rgba(0, 230, 153, 0.08), transparent 60%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 14px 40px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 390px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 🟢 Top Online Pill Badge */
+        .online-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 230, 153, 0.08);
+            border: 1px solid rgba(0, 230, 153, 0.35);
+            color: #00e699;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 7px 18px;
+            border-radius: 30px;
+            margin-bottom: 24px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00e699;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00e699;
+            animation: blinker 1.2s infinite alternate;
+        }
+
+        @keyframes blinker {
+            from { opacity: 0.3; }
+            to { opacity: 1; }
+        }
+
+        /* 🖼️ Logo Section - Strict Size Constrained */
+        .logo-wrapper {
+            position: relative;
+            width: 130px !important;
+            height: 130px !important;
+            max-width: 130px !important;
+            max-height: 130px !important;
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ring-outer {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 2px solid #00e699;
+            box-shadow: 0 0 25px rgba(0, 230, 153, 0.6), inset 0 0 15px rgba(0, 230, 153, 0.4);
+        }
+
+        .ring-inner {
+            position: absolute;
+            inset: 6px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 230, 153, 0.4);
+        }
+
+        .logo-box {
+            width: 104px !important;
+            height: 104px !important;
+            max-width: 104px !important;
+            max-height: 104px !important;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #0b1523;
+            border: 2px solid #060c15;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* FIXED IMAGE RESIZING */
+        .logo-box img {
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+            border-radius: 50%;
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 4px;
+            right: 8px;
+            background: #00e699;
+            color: #060c15;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 900;
+            border: 2px solid #060c15;
+            z-index: 3;
+            box-shadow: 0 0 10px rgba(0, 230, 153, 0.8);
+        }
+
+        /* 👑 Headings */
+        .brand-title {
+            font-size: 25px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 0.8px;
+            margin-bottom: 8px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .accuracy-tag {
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            color: #fbbf24;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* 📊 Stats Box */
+        .stats-card {
+            width: 100%;
+            background: rgba(13, 23, 38, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 18px 10px;
+            margin-bottom: 16px;
+            backdrop-filter: blur(12px);
+        }
+
+        .stat-col {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-col:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 15%;
+            height: 70%;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-num {
+            font-size: 19px;
+            font-weight: 900;
+            color: #00e699;
+        }
+
+        .stat-lbl {
+            font-size: 9px;
+            color: #8fa0b5;
+            font-weight: 800;
+            margin-top: 5px;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        /* ⚡ Feature Cards */
+        .feature-card {
+            width: 100%;
+            background: rgba(13, 23, 38, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 15px 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            backdrop-filter: blur(12px);
+        }
+
+        .f-icon-box {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 230, 153, 0.12);
+            border: 1px solid rgba(0, 230, 153, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00e699;
+            font-size: 19px;
+            flex-shrink: 0;
+        }
+
+        .f-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .f-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+
+        .f-desc {
+            font-size: 11px;
+            color: #8fa0b5;
+            line-height: 1.3;
+        }
+
+        /* 🚀 High-Converting Join Button */
+        .btn-telegram {
+            width: 100%;
+            background: linear-gradient(135deg, #00e699, #00b377);
+            color: #060c15;
+            text-decoration: none;
+            padding: 17px;
+            border-radius: 16px;
+            font-size: 18px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 8px;
+            margin-bottom: 14px;
+            box-shadow: 0 8px 30px rgba(0, 230, 153, 0.45);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            animation: pulse-glow 1.8s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 230, 153, 0.6); }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(0, 230, 153, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 230, 153, 0); }
+        }
+
+        .sub-lock {
+            font-size: 11px;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .disclaimer {
+            font-size: 9px;
+            color: #3b4758;
+            text-align: center;
+            line-height: 1.4;
+            padding: 0 5px;
+        }
+
+        /* 🔔 Live Popups Notification */
+        .toast-pop {
+            position: fixed;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(11, 21, 35, 0.95);
+            border: 1px solid rgba(0, 230, 153, 0.4);
+            border-radius: 30px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            width: 90%;
+            max-width: 360px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .toast-avatar {
+            width: 26px;
+            height: 26px;
+            background: #00e699;
+            color: #060c15;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 900;
         }
 
         .toast-msg {
@@ -1278,12 +1618,11 @@
 <body>
 
     <div class="container">
-        <!-- Live Badge -->
         <div class="online-pill">
             <span class="live-dot"></span> LIVE • 3,940+ ONLINE NOW
         </div>
 
-        <!-- Logo with Neon Glow Rings -->
+        <!-- FIXED LOGO WRAPPER -->
         <div class="logo-wrapper">
             <div class="ring-outer"></div>
             <div class="ring-inner"></div>
@@ -1293,11 +1632,9 @@
             <div class="verified-badge">✓</div>
         </div>
 
-        <!-- Title & Badge -->
         <h1 class="brand-title">IPL TOSS EXPERT™</h1>
         <div class="accuracy-tag">HIGH ACCURACY PREDICTIONS</div>
 
-        <!-- Stats Grid -->
         <div class="stats-card">
             <div class="stat-col">
                 <div class="stat-num">153K+</div>
@@ -1313,7 +1650,6 @@
             </div>
         </div>
 
-        <!-- Features Section -->
         <div class="feature-card">
             <div class="f-icon-box">✓</div>
             <div class="f-info">
@@ -1338,7 +1674,6 @@
             </div>
         </div>
 
-        <!-- Big Join Button -->
         <a href="https://t.me/+px4U9bS2jLVkZTFl" class="btn-telegram">
             <span>✈️</span> JOIN TELEGRAM NOW
         </a>
@@ -1347,12 +1682,10 @@
             <span>🔒</span> 100% Free VIP Channel • No Fee Charged
         </div>
 
-        <!-- Legal Disclaimer -->
         <div class="disclaimer">
             <b>Disclaimer & Safety Notice:</b> This channel and website provide cricket match statistics, information, and analysis for educational and news purposes only.
         </div>
 
-        <!-- Real-Time Dynamic Toast Notification -->
         <div class="toast-pop" id="toast">
             <div class="toast-avatar" id="toast-av">P</div>
             <div class="toast-msg"><b id="toast-name">Pankaj R.</b> from <span id="toast-city">Lucknow</span> joined channel</div>
@@ -1360,7 +1693,6 @@
         </div>
     </div>
 
-    <!-- Script for Dynamic Live Joining Popups -->
     <script>
         const names = ["Rahul S.", "Amit K.", "Vikram P.", "Suresh M.", "Deepak Verma", "Rohit Sharma", "Karan Singh", "Anish G."];
         const cities = ["Mumbai", "Delhi", "Jaipur", "Lucknow", "Indore", "Ahmedabad", "Patna", "Kolkata"];
