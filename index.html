@@ -2,484 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>IPL TOSS EXPERT™ | Official Prediction Channel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Cabinet+Grotesk:wght@800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      
-      fbq('init', '1352981867033325'); 
-      fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Toss Expert™ - Official</title>
     <style>
-        :root {
-            --gold-gradient: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
-            --cta-gradient: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
-            --bg-dark: #070a13;
-            --card-bg: rgba(18, 24, 38, 0.75);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(255, 140, 0, 0.25) 0%, transparent 60%),
-                radial-gradient(circle at 50% 100%, rgba(0, 242, 254, 0.15) 0%, transparent 60%);
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 12px;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        .card-container {
-            width: 100%;
-            max-width: 410px;
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-top: 1px solid rgba(255, 215, 0, 0.4);
-            border-radius: 28px;
-            padding: 24px 20px;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.15);
-            position: relative;
-            z-index: 1;
-        }
-
-        .top-status-bar {
-            background: rgba(239, 68, 68, 0.15);
-            border: 1px solid rgba(239, 68, 68, 0.4);
-            color: #ef4444;
-            border-radius: 50px;
-            padding: 6px 14px;
-            font-size: 11px;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .top-status-bar i {
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-
-        .profile-sec {
-            position: relative;
-            width: 110px;
-            height: 110px;
-            margin: 0 auto 16px;
-        }
-
-        .glow-ring {
-            position: absolute;
-            inset: -3px;
-            border-radius: 50%;
-            background: var(--gold-gradient);
-            filter: blur(4px);
-            opacity: 0.8;
-            animation: pulseGlow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes pulseGlow {
-            0% { opacity: 0.5; transform: scale(0.98); }
-            100% { opacity: 1; transform: scale(1.03); }
-        }
-
-        .profile-img {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #0d1322;
-        }
-
-        .brand-title {
-            font-family: 'Cabinet Grotesk', sans-serif;
-            font-size: 26px;
-            font-weight: 900;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            margin-bottom: 4px;
-        }
-
-        .verified-icon { color: #38bdf8; font-size: 20px; }
-
-        .brand-tag {
-            font-size: 12px;
-            color: #94a3b8;
-            font-weight: 700;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 18px;
-            padding: 14px 10px;
-            margin-bottom: 14px;
-        }
-
-        .stat-number {
-            font-family: 'Cabinet Grotesk', sans-serif;
-            font-size: 20px;
-            font-weight: 900;
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-number.green {
-            background: linear-gradient(135deg, #10b981, #34d399);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-label { font-size: 9px; color: #64748b; font-weight: 800; text-transform: uppercase; margin-top: 3px; }
-
-        /* Dynamic Proof Box */
-        .proof-box {
-            background: rgba(16, 185, 129, 0.08);
-            border: 1px dashed rgba(16, 185, 129, 0.35);
-            border-radius: 14px;
-            padding: 10px 12px;
-            margin-bottom: 16px;
-            display: flex;
-            justify-content: space-around;
-            font-size: 11px;
-            font-weight: 800;
-            color: #34d399;
-        }
-
-        .proof-item i { margin-right: 5px; }
-
-        .feature-card {
-            background: rgba(10, 15, 29, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 16px;
-            padding: 14px;
-            margin-bottom: 16px;
-            text-align: left;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 13px;
-            font-weight: 700;
-            color: #e2e8f0;
-            margin-bottom: 12px;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: #0a0d14; color: #ffffff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 15px; }
+        .card { background: linear-gradient(180deg, #161b26 0%, #0d1117 100%); border: 1px solid #2a3447; border-radius: 20px; width: 100%; max-width: 420px; padding: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .timer-badge { background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 12px; font-weight: bold; padding: 6px 12px; border-radius: 20px; display: inline-block; margin-bottom: 15px; }
+        .logo { width: 90px; height: 90px; border-radius: 50%; border: 3px solid #f59e0b; margin: 0 auto 10px auto; display: block; box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); object-fit: cover; }
+        h1 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; }
+        .subtitle { font-size: 11px; color: #9ca3af; margin-bottom: 15px; letter-spacing: 1px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; background: rgba(255,255,255,0.03); padding: 10px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 15px; }
+        .stat-box h3 { font-size: 16px; color: #f59e0b; }
+        .stat-box p { font-size: 9px; color: #9ca3af; text-transform: uppercase; margin-top: 2px; }
+        .status-bar { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: #10b981; font-size: 12px; font-weight: 600; padding: 8px; border-radius: 8px; margin-bottom: 15px; }
+        .features { text-align: left; background: rgba(255,255,255,0.02); padding: 12px; border-radius: 12px; margin-bottom: 15px; }
+        .feature-item { font-size: 12px; color: #d1d5db; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
         .feature-item:last-child { margin-bottom: 0; }
-
-        .feature-icon {
-            width: 28px;
-            height: 28px;
-            border-radius: 8px;
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.25);
-            color: #ffd700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            flex-shrink: 0;
-        }
-
-        .live-user-bar {
-            font-size: 11px;
-            font-weight: 800;
-            color: #22c55e;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            margin-bottom: 16px;
-        }
-
-        .dot-pulse {
-            width: 8px;
-            height: 8px;
-            background: #22c55e;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #22c55e;
-        }
-
-        /* Attention-Grabbing Shake CTA Button */
-        .telegram-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 100%;
-            padding: 18px 20px;
-            background: var(--cta-gradient);
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 900;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 12px 30px rgba(0, 176, 155, 0.4);
-            text-transform: uppercase;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            animation: ctaShake 3s infinite;
-        }
-
-        @keyframes ctaShake {
-            0%, 100% { transform: scale(1); }
-            10%, 20% { transform: scale(0.98) rotate(-1deg); }
-            30%, 50%, 70% { transform: scale(1.03) rotate(1deg); }
-            40%, 60% { transform: scale(1.03) rotate(-1deg); }
-            80% { transform: scale(1) rotate(0); }
-        }
-
-        .fallback-text { font-size: 11px; color: #94a3b8; margin-top: 10px; font-weight: 600; }
-        .fallback-text a { color: #38bdf8; text-decoration: underline; }
-
-        .trust-footer {
-            display: flex;
-            justify-content: space-around;
-            padding-top: 16px;
-            margin-top: 18px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 10px;
-            color: #64748b;
-            font-weight: 700;
-        }
-
-        .trust-item { display: flex; align-items: center; gap: 5px; }
-        .trust-item i { color: #ffd700; }
-
-        /* Dynamic Popup Styling */
-        .fake-popup {
-            position: fixed;
-            bottom: 30px;
-            left: 20px;
-            background: rgba(15, 23, 42, 0.95);
-            border: 1px solid rgba(56, 189, 248, 0.4);
-            backdrop-filter: blur(10px);
-            border-radius: 14px;
-            padding: 10px 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-            z-index: 9999;
-            transform: translateY(120px);
-            opacity: 0;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            max-width: 290px;
-        }
-
-        .fake-popup.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .popup-avatar {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0088cc, #00f2fe);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: 800;
-            flex-shrink: 0;
-        }
-
-        .popup-info { text-align: left; }
-        .popup-title { font-size: 12px; font-weight: 800; color: #ffffff; margin-bottom: 2px; }
-        .popup-desc { font-size: 10px; color: #22c55e; font-weight: 700; }
-        .popup-time { font-size: 9px; color: #64748b; float: right; margin-left: 8px; font-weight: 600; }
+        .live-count { font-size: 11px; color: #10b981; margin-bottom: 10px; font-weight: 600; }
+        .btn-join { display: flex; justify-content: center; align-items: center; gap: 10px; background: linear-gradient(90deg, #10b981 0%, #059669 100%); color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 800; padding: 14px; border-radius: 30px; box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4); animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
+        .footer-note { font-size: 10px; color: #6b7280; margin-top: 12px; }
     </style>
+    
+    <!-- Automatic Redirect Script -->
+    <script>
+        const tgUsername = "iplToss_Fixer"; 
+        const appUrl = "tg://resolve?domain=" + tgUsername;
+        const webUrl = "https://t.me/" + tgUsername;
+
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = appUrl;
+            }, 500);
+        };
+
+        function openTelegram() {
+            window.location.href = appUrl;
+            setTimeout(function() {
+                window.location.href = webUrl;
+            }, 1000);
+        }
+    </script>
 </head>
 <body>
 
-    <div class="card-container">
-        <!-- Live Countdown Urgency Header -->
-        <div class="top-status-bar">
-            <i class="fas fa-circle"></i>
-            <span>Next Toss Tip In: <strong id="countdown">04:59</strong></span>
-        </div>
-
-        <div class="profile-sec">
-            <div class="glow-ring"></div>
-            <img src="logo.png" alt="IPL Toss Expert" class="profile-img" onerror="this.src='https://via.placeholder.com/110/0d1322/ffd700?text=IPL+TOSS'">
-        </div>
-
-        <h1 class="brand-title">
-            IPL TOSS EXPERT™
-            <i class="fas fa-check-circle verified-icon"></i>
-        </h1>
-        <p class="brand-tag">No.1 Official Prediction Channel</p>
+    <div class="card">
+        <div class="timer-badge">🔴 NEXT TOSS TIP IN: 03:45</div>
+        
+        <!-- Yahan aapka GitHub logo.png path set kar diya hai -->
+        <img src="logo.png" alt="Logo" class="logo" onerror="this.src='https://via.placeholder.com/90'">
+        
+        <h1>IPL TOSS EXPERT™</h1>
+        <div class="subtitle">NO.1 OFFICIAL PREDICTION CHANNEL</div>
 
         <div class="stats-grid">
-            <div>
-                <div class="stat-number">28.5K+</div>
-                <div class="stat-label">Members</div>
+            <div class="stat-box">
+                <h3>28.5K+</h3>
+                <p>Members</p>
             </div>
-            <div>
-                <div class="stat-number green">99.2%</div>
-                <div class="stat-label">Accuracy</div>
+            <div class="stat-box">
+                <h3>99.2%</h3>
+                <p>Accuracy</p>
             </div>
-            <div>
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Free Tips</div>
-            </div>
-        </div>
-
-        <!-- Real-Time Proof Box -->
-        <div class="proof-box">
-            <span class="proof-item"><i class="fas fa-check-circle"></i> Today's Toss: Passed 🟢</span>
-            <span class="proof-item"><i class="fas fa-fire"></i> 100% Accuracy Today</span>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-item">
-                <div class="feature-icon"><i class="fas fa-crown"></i></div>
-                <span>IPL & International Toss Predictions</span>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                <span>Session & Match Winner Analysis</span>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                <span>Instant Post-Toss Live Updates</span>
+            <div class="stat-box">
+                <h3>100%</h3>
+                <p>Free Tips</p>
             </div>
         </div>
 
-        <div class="live-user-bar">
-            <div class="dot-pulse"></div>
-            <span>1,420 users joined in last 10 mins</span>
+        <div class="status-bar">
+            ✔ Today's Toss: Passed 🟢 | ⚡ 100% Accuracy Today
         </div>
 
-        <!-- Animated Direct Deep-Link Action -->
-        <a id="joinBtn" href="javascript:void(0)" onclick="openTelegram()" class="telegram-btn">
-            <i class="fab fa-telegram-plane"></i>
-            JOIN TELEGRAM CHANNEL
+        <div class="features">
+            <div class="feature-item">👑 IPL & International Toss Predictions</div>
+            <div class="feature-item">📈 Session & Match Winner Analysis</div>
+            <div class="feature-item">⚡ Instant Post-Toss Live Updates</div>
+        </div>
+
+        <div class="live-count">🟢 1,420 users joining right now...</div>
+
+        <a href="javascript:void(0)" onclick="openTelegram()" class="btn-join">
+            ✈ JOIN TELEGRAM CHANNEL
         </a>
 
-        <p class="fallback-text">
-            Don't have Telegram app? <a href="https://t.me/+px4U9bS2jLVkZTFl" onclick="openTelegram()" target="_blank">Click here to open Web</a>
-        </p>
-
-        <div class="trust-footer">
-            <div class="trust-item"><i class="fas fa-shield-alt"></i> 100% Safe</div>
-            <div class="trust-item"><i class="fas fa-bolt"></i> Fast Updates</div>
-            <div class="trust-item"><i class="fas fa-star"></i> Top Rated</div>
+        <div class="footer-note">
+            Opening Telegram App automatically... <br>
+            If not opened, <a href="javascript:void(0)" onclick="openTelegram()" style="color:#10b981;">click here</a>.
         </div>
     </div>
-
-    <!-- Live Dynamic Notification Popup -->
-    <div id="fakePopup" class="fake-popup">
-        <div class="popup-avatar" id="popupAvatar">R</div>
-        <div class="popup-info">
-            <div class="popup-title"><span id="popupName">Rahul S.</span> <span class="popup-time" id="popupTime">2s ago</span></div>
-            <div class="popup-desc"><i class="fas fa-check-circle"></i> Joined Telegram Channel</div>
-        </div>
-    </div>
-
-    <script>
-        const webLink = "https://t.me/+px4U9bS2jLVkZTFl";
-        const appLink = "tg://join?invite=px4U9bS2jLVkZTFl";
-
-        // Lead Event & Deep-Linking Trigger
-        function openTelegram() {
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead');
-            }
-            window.location.href = appLink;
-            setTimeout(() => {
-                window.location.href = webLink;
-            }, 800);
-        }
-
-        // Live Dynamic Countdown Timer
-        let timeInSeconds = 299; // 4 mins 59 secs
-        const countdownEl = document.getElementById('countdown');
-        setInterval(() => {
-            if (timeInSeconds > 0) {
-                timeInSeconds--;
-                let m = Math.floor(timeInSeconds / 60);
-                let s = timeInSeconds % 60;
-                countdownEl.innerText = `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
-            } else {
-                timeInSeconds = 299; // Reset timer loop
-            }
-        }, 1000);
-
-        // Dynamic Fake Notification Pop-up
-        const names = ["Aman P.", "Rahul S.", "Vikas K.", "Sandeep M.", "Rohan G.", "Deepak T.", "Ankit V.", "Pankaj D.", "Karan R.", "Neeraj B."];
-        const cities = ["Delhi", "Mumbai", "Jaipur", "Lucknow", "Patna", "Indore", "Kolkata", "Ahmedabad"];
-        const times = ["Just now", "2s ago", "5s ago", "8s ago"];
-
-        function triggerNotification() {
-            const popup = document.getElementById('fakePopup');
-            const randomName = names[Math.floor(Math.random() * names.length)];
-            const randomCity = cities[Math.floor(Math.random() * cities.length)];
-            const randomTime = times[Math.floor(Math.random() * times.length)];
-
-            document.getElementById('popupName').innerText = `${randomName} (${randomCity})`;
-            document.getElementById('popupAvatar').innerText = randomName.charAt(0);
-            document.getElementById('popupTime').innerText = randomTime;
-
-            popup.classList.add('show');
-
-            setTimeout(() => {
-                popup.classList.remove('show');
-            }, 3200);
-        }
-
-        setTimeout(() => {
-            triggerNotification();
-            setInterval(triggerNotification, 5000);
-        }, 1500);
-    </script>
 
 </body>
 </html>
