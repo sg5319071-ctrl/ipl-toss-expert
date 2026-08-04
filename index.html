@@ -28,7 +28,7 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Glassmorphism Card with Gold Border Glow */
+        /* Glassmorphism Card */
         .card { 
             background: rgba(15, 20, 31, 0.85);
             backdrop-filter: blur(12px);
@@ -96,7 +96,7 @@
         
         .live-count { font-size: 11px; color: #10b981; margin-bottom: 14px; font-weight: 700; }
         
-        /* High Converting Glowing Green Button */
+        /* Glowing Green Button */
         .btn-join { 
             display: flex; 
             justify-content: center; 
@@ -112,6 +112,7 @@
             box-shadow: 0 0 25px rgba(16, 185, 129, 0.6); 
             animation: btnPulse 1.2s infinite alternate; 
             letter-spacing: 0.5px; 
+            cursor: pointer;
         }
 
         @keyframes btnPulse { 
@@ -123,27 +124,34 @@
     </style>
     
     <script>
-        const tgDeepLink = "tg://join?invite=px4U9bS2jLVkZTFl";
-        const tgWebLink = "https://t.me/+px4U9bS2jLVkZTFl";
-
-        window.onload = function() {
-            setTimeout(function() {
-                window.location.href = tgDeepLink;
-            }, 500);
-        };
-
+        // Only trigger on manual click (Auto-redirect disabled)
         function openTelegram() {
+            const tgDeepLink = "tg://join?invite=px4U9bS2jLVkZTFl";
+            const tgWebLink = "https://t.me/+px4U9bS2jLVkZTFl";
+            
             window.location.href = tgDeepLink;
             setTimeout(function() {
                 window.location.href = tgWebLink;
             }, 1200);
         }
+
+        // Countdown Timer Logic
+        let time = 225; // 3 minutes 45 seconds
+        setInterval(function() {
+            if (time > 0) {
+                time--;
+                let minutes = Math.floor(time / 60);
+                let seconds = time % 60;
+                document.getElementById('timer').innerText = 
+                    (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+            }
+        }, 1000);
     </script>
 </head>
 <body>
 
     <div class="card">
-        <div class="timer-badge">🔴 NEXT TOSS TIP IN: 03:45</div>
+        <div class="timer-badge">🔴 NEXT TOSS TIP IN: <span id="timer">03:45</span></div>
         
         <img src="logo.png" alt="IPL Toss Expert Logo" class="logo" onerror="this.onerror=null; this.src='https://i.ibb.co/L539W4V/logo.jpg';">
         
@@ -182,8 +190,7 @@
         </a>
 
         <div class="footer-note">
-            Opening Telegram App automatically... <br>
-            If not opened, <a href="javascript:void(0)" onclick="openTelegram()" style="color:#10b981; font-weight:bold; text-decoration:underline;">click here</a>.
+            Click above button to join official channel.
         </div>
     </div>
 
