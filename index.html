@@ -8,7 +8,6 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
         
-        /* Animated Dark Premium Background */
         body { 
             background: linear-gradient(-45deg, #05070a, #0f172a, #1a1003, #061810);
             background-size: 400% 400%;
@@ -20,6 +19,7 @@
             min-height: 100vh; 
             padding: 15px; 
             overflow-x: hidden;
+            position: relative;
         }
 
         @keyframes gradientBG {
@@ -28,7 +28,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Glassmorphism Card */
         .card { 
             background: rgba(15, 20, 31, 0.85);
             backdrop-filter: blur(12px);
@@ -40,9 +39,9 @@
             text-align: center; 
             box-shadow: 0 10px 40px rgba(245, 158, 11, 0.15), 0 0 20px rgba(0,0,0,0.8);
             position: relative;
+            margin-bottom: 50px;
         }
 
-        /* Animated Live Red Badge */
         .timer-badge { 
             background: rgba(239, 68, 68, 0.15); 
             color: #ef4444; 
@@ -63,7 +62,6 @@
             100% { box-shadow: 0 0 15px rgba(239, 68, 68, 0.6); }
         }
 
-        /* Animated Logo */
         .logo { 
             width: 95px; 
             height: 95px; 
@@ -96,7 +94,6 @@
         
         .live-count { font-size: 11px; color: #10b981; margin-bottom: 14px; font-weight: 700; }
         
-        /* Glowing Green Button */
         .btn-join { 
             display: flex; 
             justify-content: center; 
@@ -113,6 +110,8 @@
             animation: btnPulse 1.2s infinite alternate; 
             letter-spacing: 0.5px; 
             cursor: pointer;
+            border: none;
+            width: 100%;
         }
 
         @keyframes btnPulse { 
@@ -121,32 +120,42 @@
         }
 
         .footer-note { font-size: 11px; color: #9ca3af; margin-top: 14px; line-height: 1.4; }
-    </style>
-    
-    <script>
-        // Only trigger on manual click (Auto-redirect disabled)
-        function openTelegram() {
-            const tgDeepLink = "tg://join?invite=px4U9bS2jLVkZTFl";
-            const tgWebLink = "https://t.me/+px4U9bS2jLVkZTFl";
-            
-            window.location.href = tgDeepLink;
-            setTimeout(function() {
-                window.location.href = tgWebLink;
-            }, 1200);
+
+        /* Fake Joining Pop-up Styling */
+        .toast-popup {
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #ffffff;
+            padding: 10px 16px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: 9999;
         }
 
-        // Countdown Timer Logic
-        let time = 225; // 3 minutes 45 seconds
-        setInterval(function() {
-            if (time > 0) {
-                time--;
-                let minutes = Math.floor(time / 60);
-                let seconds = time % 60;
-                document.getElementById('timer').innerText = 
-                    (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
-            }
-        }, 1000);
-    </script>
+        .toast-popup.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10b981;
+        }
+    </style>
 </head>
 <body>
 
@@ -183,9 +192,9 @@
             <div class="feature-item">⚡ Instant Post-Toss Live Updates</div>
         </div>
 
-        <div class="live-count">🟢 1,420 users joining right now...</div>
+        <div class="live-count">🟢 <span id="live-user-count">1,420</span> users joining right now...</div>
 
-        <a href="javascript:void(0)" onclick="openTelegram()" class="btn-join">
+        <a href="https://t.me/+px4U9bS2jLVkZTFl" target="_blank" class="btn-join">
             ✈ JOIN TELEGRAM CHANNEL
         </a>
 
@@ -194,5 +203,61 @@
         </div>
     </div>
 
+    <!-- Notification Toast Element -->
+    <div id="toast" class="toast-popup">
+        <div class="toast-dot"></div>
+        <span id="toast-text">Rahul M. just joined the channel!</span>
+    </div>
+
+    <script>
+        // Countdown Timer Logic
+        let time = 225;
+        setInterval(function() {
+            if (time > 0) {
+                time--;
+                let minutes = Math.floor(time / 60);
+                let seconds = time % 60;
+                document.getElementById('timer').innerText = 
+                    (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+            }
+        }, 1000);
+
+        // Dynamic Fake Joining Notifications Logic
+        const names = [
+            "Amit Kumar", "Rohit Sharma", "Vikas Patel", "Suresh R.", "Deepak Singh", 
+            "Anit Yadav", "Manish Verma", "Pankaj G.", "Karan Sharma", "Rahul Gupta", 
+            "Aakash Mehta", "Sanjay Jha", "Rohan Das", "Vikram Rathore", "Vishal K."
+        ];
+
+        let baseUserCount = 1420;
+
+        function showFakeNotification() {
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const toast = document.getElementById('toast');
+            const toastText = document.getElementById('toast-text');
+            const userCountElem = document.getElementById('live-user-count');
+
+            toastText.innerText = `${randomName} just joined the channel!`;
+            toast.classList.add('show');
+
+            // Increase Live User Count Slightly
+            baseUserCount += Math.floor(Math.random() * 3) + 1;
+            userCountElem.innerText = baseUserCount.toLocaleString();
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000); // 3 seconds tak notification dikhega
+        }
+
+        // Trigger notification every 4 to 7 seconds randomly
+        function triggerRandomNotification() {
+            showFakeNotification();
+            const nextInterval = Math.floor(Math.random() * 3000) + 4000;
+            setTimeout(triggerRandomNotification, nextInterval);
+        }
+
+        // Start Notifications after 2 seconds
+        setTimeout(triggerRandomNotification, 2000);
+    </script>
 </body>
 </html>
