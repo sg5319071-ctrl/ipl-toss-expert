@@ -7,27 +7,122 @@
     <title>IPL Toss Expert™ - Official</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-        body { background: #0c0f17; color: #ffffff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 15px; }
-        .card { background: linear-gradient(180deg, #161b26 0%, #0d1117 100%); border: 1px solid #232d3f; border-radius: 24px; width: 100%; max-width: 400px; padding: 24px 20px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.6); }
-        .timer-badge { background: rgba(239, 68, 68, 0.12); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.25); font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 20px; display: inline-block; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .logo { width: 95px; height: 95px; border-radius: 50%; border: 3px solid #f59e0b; margin: 0 auto 12px auto; display: block; box-shadow: 0 0 20px rgba(245, 158, 11, 0.35); object-fit: cover; }
-        h1 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; margin-bottom: 4px; }
-        .subtitle { font-size: 11px; color: #9ca3af; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; background: rgba(255,255,255,0.03); padding: 12px 8px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 16px; }
+        
+        /* Animated Dark Premium Background */
+        body { 
+            background: linear-gradient(-45deg, #05070a, #0f172a, #1a1003, #061810);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: #ffffff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            padding: 15px; 
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism Card with Gold Border Glow */
+        .card { 
+            background: rgba(15, 20, 31, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 24px; 
+            width: 100%; 
+            max-width: 400px; 
+            padding: 24px 20px; 
+            text-align: center; 
+            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.15), 0 0 20px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        /* Animated Live Red Badge */
+        .timer-badge { 
+            background: rgba(239, 68, 68, 0.15); 
+            color: #ef4444; 
+            border: 1px solid rgba(239, 68, 68, 0.4); 
+            font-size: 12px; 
+            font-weight: 700; 
+            padding: 6px 14px; 
+            border-radius: 20px; 
+            display: inline-block; 
+            margin-bottom: 18px; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px;
+            animation: pulseGlow 1.5s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 5px rgba(239, 68, 68, 0.2); }
+            100% { box-shadow: 0 0 15px rgba(239, 68, 68, 0.6); }
+        }
+
+        /* Animated Logo */
+        .logo { 
+            width: 95px; 
+            height: 95px; 
+            border-radius: 50%; 
+            border: 3px solid #f59e0b; 
+            margin: 0 auto 12px auto; 
+            display: block; 
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.5); 
+            object-fit: cover;
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; margin-bottom: 4px; text-shadow: 0 0 10px rgba(255,255,255,0.2); }
+        .subtitle { font-size: 11px; color: #f59e0b; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; background: rgba(255,255,255,0.03); padding: 12px 8px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 16px; }
         .stat-box h3 { font-size: 17px; color: #f59e0b; font-weight: 800; }
         .stat-box p { font-size: 9px; color: #9ca3af; text-transform: uppercase; margin-top: 2px; font-weight: 600; }
-        .status-bar { background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); color: #10b981; font-size: 12px; font-weight: 700; padding: 10px; border-radius: 10px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 6px; }
-        .features { text-align: left; background: rgba(255,255,255,0.02); padding: 14px; border-radius: 14px; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.03); }
-        .feature-item { font-size: 12px; color: #d1d5db; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+        
+        .status-bar { background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); color: #10b981; font-size: 12px; font-weight: 700; padding: 10px; border-radius: 10px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+        .features { text-align: left; background: rgba(255,255,255,0.02); padding: 14px; border-radius: 14px; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.05); }
+        .feature-item { font-size: 12px; color: #e5e7eb; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
         .feature-item:last-child { margin-bottom: 0; }
+        
         .live-count { font-size: 11px; color: #10b981; margin-bottom: 14px; font-weight: 700; }
-        .btn-join { display: flex; justify-content: center; align-items: center; gap: 8px; background: linear-gradient(90deg, #10b981 0%, #059669 100%); color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 800; padding: 15px; border-radius: 30px; box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4); animation: pulse 1.5s infinite; letter-spacing: 0.5px; }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
-        .footer-note { font-size: 11px; color: #6b7280; margin-top: 14px; line-height: 1.4; }
+        
+        /* High Converting Glowing Green Button */
+        .btn-join { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 8px; 
+            background: linear-gradient(90deg, #10b981 0%, #059669 100%); 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 16px; 
+            font-weight: 800; 
+            padding: 16px; 
+            border-radius: 30px; 
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.6); 
+            animation: btnPulse 1.2s infinite alternate; 
+            letter-spacing: 0.5px; 
+        }
+
+        @keyframes btnPulse { 
+            0% { transform: scale(1); box-shadow: 0 0 15px rgba(16, 185, 129, 0.4); } 
+            100% { transform: scale(1.03); box-shadow: 0 0 30px rgba(16, 185, 129, 0.8); } 
+        }
+
+        .footer-note { font-size: 11px; color: #9ca3af; margin-top: 14px; line-height: 1.4; }
     </style>
     
     <script>
-        // Direct Telegram App Deep-Link (Bypasses Web Browser completely)
         const tgDeepLink = "tg://join?invite=px4U9bS2jLVkZTFl";
         const tgWebLink = "https://t.me/+px4U9bS2jLVkZTFl";
 
@@ -39,10 +134,9 @@
 
         function openTelegram() {
             window.location.href = tgDeepLink;
-            // Fallback for PC users
             setTimeout(function() {
                 window.location.href = tgWebLink;
-            }, 1500);
+            }, 1200);
         }
     </script>
 </head>
